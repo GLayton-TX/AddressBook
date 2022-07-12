@@ -7,38 +7,91 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AddressBook.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/font-awesome/css/font-awesome.min.css">
+
+
+    <!-- Favicon-->
+  <link rel="shortcut icon" href="~/img/Favicon/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AddressBook</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+    <!-- navbar-->
+  <header class="header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid mx-3 mx-lg-5">
+          <div>
+            <a href="https://glayton.com" class="navbar-brand">
+               <img src="img/Branding/logoDark.svg" alt="Greg Layton logo" height="36" class="d-none d-lg-inline-block">
+            </a>
+          </div>
+          <div>
+            <span class="logoFont  ms-lg-1" style="font-size:24px;color:var(--primary-color)">Asp.Net Address Book</span>
+          </div>
+           <button type="button" data-bs-toggle="collapse" data-bs-target="#navbarcollapse"
+               aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+               class="navbar-toggler position-absolute top-0 start-0"><span class="fa fa-bars hamburgerIcon fa-2x"></span>
+           </button>
+
+        <div id="navbarcollapse" class="collapse navbar-collapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link link-scroll" asp-area="" asp-controller="Home" asp-action="Index" >Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-scroll" asp-area="" asp-controller="Contacts" asp-action="Index">The App</a>                
+            </li>
+            <li class="nav-item">
+                <a href="https://glayton.com/#about" target="_blank" class="nav-link link-scroll">About Me</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://glayton.com/#contact" target="_blank" class="nav-link link-scroll">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
     <div class="container">
-        <main role="main" class="pb-3">
+        <main role="main" class="pb-3 ">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - AddressBook - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer py-2 mt-auto">
+        <div class="container-fluid ">
+            <div class="row row-cols-1 row-cols-lg-3 gy-lg-2 mx-lg-5">
+                <div class="col order-last order-lg-first d-none d-lg-block">
+                    <div><span class="copyright">&copy;2022</span> Greg Layton | Greg@glayton.com</div>
+                </div>
+                <div class="col d-flex align-items-center justify-content-start justify-content-lg-center">
+                    <a href="https://glayton.com/" target="_blank">
+                        <img src="~/img/Branding/fullLogoDark.svg" alt="Greg Layton Logo" height="50">
+                    </a>
+                </div>
+                <div class="col align-items-center justify-content-start justify-content-lg-end d-none d-lg-flex">
+                    <div class="row">
+                        <div class="col social">
+                            <a href="https://www.linkedin.com/in/greg-layton-tx39191" target="_blank">
+                                <i class="fa fa-linkedin fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col social">
+                            <a href="https://github.com/GLayton-TX?tab=repositories" target="_blank">
+                                <i class="fa fa-github fa-2x"></i>
+                            </a>
+                        </div>
+                        <div class="col social">
+                            <a href="#" target="_blank">
+                                <i class="fa fa-twitter fa-2x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

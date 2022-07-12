@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 namespace AddressBook.Models
 {
     public class Contact
-    {
+    { 
         public int Id { get; set; }
 
         [Display(Name = "First Name")]
@@ -12,9 +12,10 @@ namespace AddressBook.Models
         
         [Display(Name ="Last Name")]
         public string LastName { get; set; }
-        
+        [Display(Name ="Address")]
         public string Address1 { get; set; }
-        public string Address2 { get; set; }
+        [Display(Name = "Address(Continued)")]
+        public string? Address2 { get; set; }
         public string City { get; set; }
         public string State { get; set; }
 
