@@ -18,6 +18,21 @@ main {
     margin-bottom: auto;
 }
 
+.logoFont {
+    font-family:;
+    color: #f6e06e;
+}
+
+.logoBG {
+    background-color: var(--dark-color);
+}
+
+.imageAttrib {
+    color: var(--dark-color);
+    opacity: 0.5;
+    font-size: x-small;
+}
+
 nav.navbar a.nav-link.active,
 nav.navbar a.nav-link:hover {
     color: var(--secondary-color);
@@ -37,7 +52,19 @@ nav.navbar {
     color: var(--secondary-color);
 }
 
+body {
+    background-color: var(--background-color);
+    color: var(--dark-color)
+}
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+}
 
 .bg-gradient {
     background: -webkit-gradient(linear, left top, left bottom, from(var(--primary-color)), to(#81e0f6)) !important;
@@ -130,4 +157,24 @@ footer {
 
 .copyright {
     color: var(--primary-color);
+}
+
+.bsIcon {
+    color: #8411fa;
+}
+
+.jsIcon {
+    color: #efd81d;
+}
+
+.html5Icon {
+    color: #e56027;
+}
+
+.cssIcon {
+    color: #1a6db1;
+}
+
+.checklist > li i {
+    color: var(--call-color);
 }
